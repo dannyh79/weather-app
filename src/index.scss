@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'motseratt', sans-serif;
+}
+
+.app {
+  /* background-image: url('./assets/cold-bg.jpg'); */
+  background-color: #0af;
+  background-size: cover;
+  background-position: bottom;
+  transition: .4s ease-out;
+
+  &.warm {
+    /* background-image: url('./assets/warm-bg.jpg'); */
+    background-color: #fa0;
+  }
+}
+
+
+main {
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(0, 0, 0, .75));
+  padding: 25px;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 75px;
+
+  .search-bar {
+    color: #313131;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: -25px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 5px rgba(0, 0, 0, .2);
+    transition: .4s ease;
+
+    &:focus {
+      background-color: rgba(255, 255, 255, .75);
+    }
+  }
+}
+
+
