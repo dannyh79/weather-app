@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+@mixin centered-white-text {
+  color: #fff;
+  text-align: center;
+}
+
+@mixin text-shadow($offset-x: 3px, $offset-y: 3px) {
+  text-shadow: $offset-x $offset-y rgba(50, 50, 70, .5);
+}
+
 body {
   font-family: 'motseratt', sans-serif;
 }
@@ -52,33 +61,31 @@ main {
 }
 
 .location-box {
-  color: #fff;
-  text-align: center;
+  @include centered-white-text;
 
   .location {
     font-size: 32px;
     font-weight: 500;
-    text-shadow: 3px 3px rgba(50, 50, 70, .5);
+    @include text-shadow;
   }
 
   .date {
     font-size: 20px;
     font-weight: 300;
     font-style: italic;
-    text-shadow: 2px 2px rgba(50, 50, 70, .5);
+    @include text-shadow(2px, 2px);
   }
 }
 
 .weather-box {
-  color: #fff;
-  text-align: center;
+  @include centered-white-text;
 
   .temp {
     display: inline-block;
     background-color: rgba(255, 255, 255, .2);
     font-size: 102px;
     font-weight: 900;
-    text-shadow: 3px 6px rgba(50, 50, 70, .5);
+    @include text-shadow($offset-y: 6px);
     padding: 15px 25px;
     margin: 30px auto;
     border-radius: 16px;
@@ -88,6 +95,6 @@ main {
   .weather {
     font-size: 48px;
     font-weight: 700;
-    text-shadow: 3px 3px rgba(50, 50, 70, .5);
+    @include text-shadow;
   }
 }
